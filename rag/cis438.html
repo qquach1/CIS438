@@ -1,0 +1,329 @@
+<h2>Course Description</h2>
+This course introduces the basics of web-based agentic AI applications, with three main objectives. The primary objective is to introduce the design and implementation of agentic AI applications. The second objective is to pave the way for subsequent courses so that students can use what they learn in this course to integrate what they learn in other courses through a web-based user interface. The third objective is to prepare students for the job market by equipping them with a portfolio of projects illustrated as a web-based application.
+<hr>
+<h2>Learning Objectives</h2>
+The course emphasizes experiential learning and contains many hands-on projects. Specific learning objectives include
+<ol>
+    <li>Understand the fundamentals of web technology and web frameworks</li>
+    <li>Understand the fundamentals of LLM, with a focus on inference</li>
+    <li>Learn model inference, using both open-weight models and proprietary models</li>
+    <li>Learn the techniques and applications of Retrieval Augmented Generation (RAG)</li>
+    <li>Learn AI orchestration, with a focus on LangChain and LangGraph</li>
+    <li>Learn the basics of agentic AI</li>
+    <li>Learn AI reasoning and tool use</li>
+    <li>Learn commonly used agentic design patterns</li>
+    <li>Learn Model Context Protocol (MCP)</li>
+</ol>
+
+<h2>Relation with other Courses at Simon Business School</h2>
+This course is related to CIS432 Machine Learning for Business Analytics, CIS433 AI & Deep Learning, CIS 434 Social Media and Text Analytics, GBA478 Introduction to AI & Business, and GBA479 Generative AI and Business Application. Students are expected to be familiar with Python, for example, by taking GBA465 Introduction to Python Programming.
+
+<h2>Recommended References</h2>
+There is no textbook. But if you really need some references, here are two relatively recent ones, although they are both somewhat outdated by now. 
+<ul>
+    <li><a href="https://www.amazon.com/Learning-LangChain-Building-Applications-LangGraph/dp/1098167287" target="_blank">Learning LangChain</a>, by Mayo Oshin and Nuno Campos, 1st Edition, 2025</li>
+    <li><a href="https://www.amazon.com/AI-Agents-Applications-LangChain-LangGraph/dp/1633436543/" target="_blank">AI Agents and Applications</a>, by Roberto Infante, 1st Edition, 2026</li>    
+    <!-- <li><a href="https://www.amazon.com/Learning-Python-Powerful-Object-Oriented-Programming/dp/1098171306" target="_blank">Learning Python: Powerful Object-Oriented Programming</a>, by Mark Lutz, 6th Edition, 2025</li> -->
+</ul>
+
+<h2>Hardware and Software</h2>
+While subscription to OpenAI or Claude is not strictly required, it is highly recommended, especially if you need to vibe code your projects. A subscription to ChatGPT Plus ($20/month) should be sufficient for this course. 
+I also suggest you create an API key for LLM inference, for example, at <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI</a>. 
+Please not that you need to purchase API credit separately (i.e., in addition to your monthly subscription) to make API calls. A $5 credit should be sufficient. Since API credit expire in 12 months, there is no need to purchase more than the minimum (i.e., $5) for the purpose of taking this course.
+Although not required, you will benefit more if you have access to a laptop or workstation equipped with a decent GPU (e.g., RTX4090).
+
+
+<h2>Grading</h2>
+Your grade is based on projects, quizzes, as well as class participation.
+
+<table class="table">
+    <tbody>
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Component</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Notes</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Quizzes</td>
+            <td>10%</td>
+            <td>Quizzes are closed-book and are based only on my slides. I usually decide whether to give a quiz at the beginning of each class.</td>
+        </tr>
+        <tr>
+            <td>Weblog Observatory App</td>
+            <td>10%</td>
+            <td>Individual-based. <span class="blinking-text alertext">Online by Nov 17 at 1 PM.</span></td>
+        </tr>
+        <tr>
+            <td>Travel Agent App</td>
+            <td>10%</td>
+            <td>Individual-based. <span class="blinking-text alertext">Online by Dec 4 at 1 PM.</span></td>
+        </tr>      
+        <tr>
+            <td>Capstone App</td>
+            <td>50%</td>
+            <td>Individual-based, <span class="blinking-text alertext">Online by Dec 8 at 1 PM.  In-person presentation on Dec 8 or Dec 10</span></td>
+        </tr>
+        <tr>
+            <td>Attendance</td>
+            <td>16%</td>
+            <td>Your attendance score will not be affected unless you miss 8 or more classes. Beyond the exemption of 7 absences, each additional absence will reduce your attendance score by 2 points.</td>
+        </tr>
+        <tr>
+            <td>Participation & Professionalism</td>
+            <td>4%</td>
+            <td>The default score for Participation & Professionalism is 3. You can get a higher score if I am particularly impressed by the frequency and quality of your participation throughout the course. Although uncommon, it's also possible to get a lower score because of unprofessional behavior.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2> Schedule</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Session</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Learning Objectives</th>
+            <th scope="col">Experiential Learning</th>
+          </tr>
+    </thead>
+    <tbody>       
+
+        <tr> <!-- 1 -->
+            <td><div>Oct 27</div> <div class="circle-text tuesday">T</div></td>
+            <td>Web Technology</td>
+            <td>
+                <ul>                    
+                    <li>Client-server architecture</li>
+                    <li>Backend vs. Front-end</li>
+                    <li>Web programming: Javascript vs Python</li>
+                    <li>Streamlit</li>
+                    <li>HTML, Markdown</li>                    
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Python virtual environment</li>                    
+                    <li>In-Class Exercise: Rochester Crime Data</li>
+                    <li>In-Class Exercise: Text Analytics</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr> <!-- 2 -->     
+            <td><div>Oct 29</div> <div class="circle-text thursday">TH</div></td>
+            <td>Machine Learning App</td>
+            <td>
+                <ul>
+                    <li>Classical Machine Learning</li>
+                    <li>Deep Learning</li> 
+                </ul>
+            </td>
+            <td>
+                <ul>                    
+                    <li>In-Class Exercise: Penguins</li>
+                    <li>In-Class Exercise: Dog vs Cat</li>
+                </ul>
+            </td>
+            
+        </tr>
+
+
+        <tr> <!-- 3 -->
+            <td> <div>Nov 3</div><div class="circle-text tuesday">T</div></td>
+            <td>Vibe Coding</td> 
+            <td>
+                <ul>
+                    <li>TCP/IP Model</li>
+                    <li>DNS</li>
+                    <li>HTTP vs HTTPS</li>
+                    <li>Certificates</li>
+                    <li>CSS</li>
+                    <li>NodeJS/Express</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>In-Class Exercise: Grader</li>
+                    <li>In-Class Exercise: Launch an App on SimonBB.com</li>                    
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr> <!-- 4 -->
+            <td><div>Nov 5</div> <div class="circle-text thursday">TH</div></td>            
+            <td>AI Orchestrators</td>
+            <td>
+                <ul>
+                    <li>Foundation Models</li>                                         
+                    <li>LangChain</li>
+                    <li>Memory</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Inference Engine: LM Studio, Ollama</li>
+                    <li>Huggingface: <code>hf download Qwen/Qwen3-0.6B-GGUF Qwen3-0.6B-Q8_0.gguf --local-dir Qwen3-0.6B-GGUF</code></li>
+                </ul>
+            </td>   
+            
+        </tr>
+        
+
+        <tr> <!-- 5 -->
+            <td> <div>Nov 10</div> <div class="circle-text tuesday">T</div></td>            
+            <td>Retrieval Augmented Generation (RAG)</td>
+            <td>
+                <ul>
+                    <li>Chunking</li>
+                    <li>Embedding</li>
+                    <li>Vector Store</li>
+                    <li>Retriever</li>                   
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>In-Class Exercise: Virtual RA</li>
+                    <li>Weblog Data</li>
+                </ul>
+            </td>               
+        </tr>
+
+
+        <tr> <!-- 6 -->
+            <td> <div>Nov 17</div> <div class="circle-text tuesday">T</div></td>            
+            <td>Advanced RAG</td>
+            <td>
+                <ul>                    
+                    <li>Query Transformation</li>
+                    <li>Two-layer Chunk Structure</li>
+                    <li>Hypothetical Question</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>In-Class Exercise: Coursebot</li>
+                    <li><span class="blinking-text alertext">Weblog Observatory App online by 1 PM</span></li>
+                </ul>                
+            </td>      
+        </tr>
+
+
+
+        <tr> <!-- 7 -->
+            <td> <div>Nov 19</div> <div class="circle-text thursday">TH</div></td>            
+            <td>LangGraph</td>
+            <td>
+                <ul>   
+                    <li>Workflow</li>
+                    <li>State, Node, Edge</li>
+                    <li>Conditional Edge</li>
+                    <li>Loop</li>
+                </ul>
+            </td>
+            <td>
+            </td>     
+        </tr>
+
+
+        <tr><!-- 8 -->
+            <td><div>Nov 24</div> <div class="circle-text tuesday">T</div></td>
+            <td>Agent</td>
+            <td>
+                <ul>
+                    <li>ReACT</li>
+                    <li>Tools</li>
+                </ul>
+            </td>            
+            </td>
+        </tr>
+
+
+        <tr> <!-- 9 -->
+            <td> <div>Dec 1</div> <div class="circle-text tuesday">T</div></td>            
+            <td>Agentic Design Patterns (I)</td>
+            <td>
+                <ul>
+                    <li>Router</li>                    
+                    <li>Guardrails</li>  
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>In-Class Exercise: Travel Agent</li>
+                </ul>            
+            </td>
+        </tr>
+
+
+        <tr> <!-- 10 -->
+            <td><div>Dec 3</div> <div class="circle-text thursday">TH</div> </td>
+            <td>Agentic Design Patterns (II)</td>
+            <td>
+                <ul>
+                    <li>Subgraph</li>
+                    <li>Supervisor</li>
+                    <li>Reflection</li>
+                    <li>LangSmith</li>                  
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>In-Class Exercise: Coursebot with Tools</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr> <!-- 11 -->
+            <td><div>Dec 4</div> <div class="circle-text friday">F</div></td>
+            <td>Model Contex Protocol (MCP)</td>
+            <td>
+                <ul>
+                    <li>Building MCP Server</li>
+                    <li>Consuming MCP Server</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><span class="blinking-text alertext">Travel Agent App online by 1 PM</span></li>
+                </ul>
+            </td>
+        </tr>
+
+        
+
+        <tr> <!-- 12 -->
+            <td> <div>Dec 8</div> <div class="circle-text tuesday">T</div></td>
+            <td>In-Person Presentation of Capstone Project</td>
+        </tr>
+       
+
+        <tr> <!-- 13/14 -->
+            <td><div>Dec 10 <span class="blinking-text alertext">(1:40 - 4:40)</span></div> <div class="circle-text thursday">TH</div> </td>
+            <td>In-Person Presentation of Capstone Project</td>
+            <td></td>
+            <td>              
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h2>Need help?</h2>
+<p><b>Teaching Assistants</b>
+    <ul>
+        <li>Jiawei Wang: jwang287@Simon.rochester.edu</li>
+    </ul>
+</p>
+<p><b>TA Office Hours</b>: Friday: 1 -- 2 PM, at CSH 3-327 (aka Fishbowl), southeast end of the hallway with glass doors.</p>
+<p><b>Faculty Office Hours</b>: Wednesday, 12 -- 1 PM, at CSH 3-310</p>
+<p><b>Email</b>: huaxia.rui@simon.rochester.edu</p>
+<p><b>Phone</b>: 585-275-4278</p>
+
+    
