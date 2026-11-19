@@ -19,6 +19,7 @@ if __name__ == "__main__":
 
 from simonbb.cis438.rag import load_documents, MultiQueryRerankRetriever, ParentDocumentRetriever, HypotheticalQuestionRetriever, build_rag
 
+
 import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -93,12 +94,11 @@ else:
     query = 'Is there a final exam?'
     query = 'When is the office hours?'
     query = 'who is the ta?'
-    query = 'what is the most famous place to visit?'
-    
+    query = 'what is the most famous place to visit?'    
 #%%    
     retriever = MultiQueryRerankRetriever( persist_directory=store_path, collection_name=kb_name, embeddings=embedding_model )   
     
-    retriever = MultiQueryRerankRetriever( persist_directory= store_path, collection_name=kb_name, embeddings=embedding_model, query_llm=llm, reranker=reranker_model, k=3, top_n=5 )
+    retriever = MultiQueryRerankRetriever( persist_directory= store_path, collection_name=kb_name, embeddings=embedding_model, query_llm=retriever.llm, reranker=reranker_model, k=3, top_n=5 )
        
 #%%
     retriever = ParentDocumentRetriever(
